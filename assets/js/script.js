@@ -17,6 +17,12 @@ const collectEmployees = function () {
     // Convert salary string into float
     let salary = parseFloat(prompt("Enter salary:"));
 
+    //Iterate while is not a number
+    while (isNaN(salary)) {
+      alert("Not a valid number");
+      salary = parseFloat(prompt("Enter salary:"));
+    }
+
     // Create employee object with given information
     let employee = { firstName: firstName, lastName: lastName, salary: salary };
 
